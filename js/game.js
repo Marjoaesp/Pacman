@@ -355,8 +355,8 @@ function score(s, type) {
 function CreateLocalStorage(){
 	let player={
 		name: "",
-		highscore: HIGHSCORE,
-		matches: 0
+		highscore: scoreAfter,
+		matches: 2
 	}
 	localStorage.setItem("player", JSON.stringify(player));
 	JSON.parse(localStorage.getItem("player"));
@@ -364,3 +364,6 @@ function CreateLocalStorage(){
 }
 
 CreateLocalStorage();
+console.log("higscore var" + highscore)
+console.log("HIGHSCORE var" + HIGHSCORE)
+console.log("HIGHSCORE var" + SCORE)
