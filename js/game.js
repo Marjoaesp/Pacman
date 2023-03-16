@@ -34,7 +34,8 @@ function blinkHelp() {
 
 function initGame(newgame) { 
 
-	if (newgame) { 
+	if (newgame) {
+		updateLocalStorageHighscoreMatches(); 
 		stopPresentation();
 		stopTrailer();
 	
@@ -284,6 +285,7 @@ function lifes(l) {
 
 function gameover() { 
 	GAMEOVER = true;
+	
 	message("game over");
 	stopTimes();
 
@@ -350,20 +352,45 @@ function score(s, type) {
 		$("#board span.fruits").css('top', (FRUITS_POSITION_Y - 14) + 'px');
 		$("#board span.fruits").css('left', (FRUITS_POSITION_X - 14) + 'px');
 	}
-}
+	
+	updateLocalStorageHighscore(HIGHSCORE);
+	
+		
+	
+	}
+checkLocalStorage();
 
 function CreateLocalStorage(){
 	let player={
-		name: "",
-		highscore: scoreAfter,
-		matches: 2
-	}
+		name: "Martin",
+		highscore: 0,
+		matches: 0
+	};
 	localStorage.setItem("player", JSON.stringify(player));
-	JSON.parse(localStorage.getItem("player"));
+	console.log(JSON.parse(localStorage.getItem("player")));
 
+}	
+
+function checkLocalStorage(){
+	if(localStorage.getItem("player")== null || undefined){
+		CreateLocalStorage();
+	}
 }
 
-CreateLocalStorage();
-console.log("higscore var" + highscore)
-console.log("HIGHSCORE var" + HIGHSCORE)
-console.log("HIGHSCORE var" + SCORE)
+function updateLocalStorageHighscore(HighScore){
+	let updateLocal=JSON.parse(localStorage.getItem("player"))
+	updateLocal.highscore=HighScore;
+	localStorage.setItem("player",JSON.stringify(updateLocal))
+	
+}
+
+function updateLocalStorageHighscoreMatches(){
+	let updateLocal=JSON.parse(localStorage.getItem("player"))
+	updateLocal.matches++
+	localStorage.setItem("player",JSON.stringify(updateLocal))
+	
+}
+
+
+
+
