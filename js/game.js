@@ -36,7 +36,7 @@ function blinkHelp() {
 function initGame(newgame) { 
 
 	if (newgame) {
-		updateLocalStorageMatches(); 
+		updateLocalStorageMatches();
 		stopPresentation();
 		stopTrailer();
 	
@@ -373,11 +373,13 @@ function CreateLocalStorage(){
 	console.log(JSON.parse(localStorage.getItem("player")));
 
 }	
-
+var localStorageWasCreated=false;
 function checkLocalStorage(){
 	if(localStorage.getItem("player")== null || undefined){
 		CreateLocalStorage();
+		localStorageWasCreated=true;
 	}
+	
 }
 
 function UpdateLocalStorageHighscore(Highscore){
@@ -388,9 +390,12 @@ function UpdateLocalStorageHighscore(Highscore){
 }
 
 function updateLocalStorageMatches(){
+	if(localStorageWasCreated){
 	let updateLocal=JSON.parse(localStorage.getItem("player"))
 	updateLocal.matches++
 	localStorage.setItem("player",JSON.stringify(updateLocal))
+	}
+	
 	
 }
 
