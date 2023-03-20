@@ -3,6 +3,7 @@ var PAUSE = false;
 var LOCK = false;
 
 var HIGHSCORE = 0;
+
 var SCORE = 0;
 var SCORE_BUBBLE = 10;
 var SCORE_SUPER_BUBBLE = 50;
@@ -35,7 +36,7 @@ function blinkHelp() {
 function initGame(newgame) { 
 
 	if (newgame) {
-		updateLocalStorageHighscoreMatches(); 
+		updateLocalStorageMatches(); 
 		stopPresentation();
 		stopTrailer();
 	
@@ -44,7 +45,7 @@ function initGame(newgame) {
 
 		$('#help').fadeOut("slow");
 		
-		score(0);
+		
 		clearMessage();
 		$("#home").hide();
 		$("#panel").show();
@@ -102,7 +103,7 @@ function initGame(newgame) {
 
 function win() { 
 	stopAllSound();
-
+	UpdateLocalStorageHighscore(HIGHSCORE);
 	LOCK = true;
 	stopPacman();
 	stopGhosts();
@@ -294,7 +295,8 @@ function gameover() {
 	
 	resetPacman();
 	resetGhosts();
-	
+	checkLocalStorage();
+	UpdateLocalStorageHighscore(HIGHSCORE);
 	TIME_GAME = 0;
 	TIME_LEVEL = 0;
 	TIME_LIFE = 0;
@@ -353,12 +355,13 @@ function score(s, type) {
 		$("#board span.fruits").css('left', (FRUITS_POSITION_X - 14) + 'px');
 	}
 	
-	updateLocalStorageHighscore(HIGHSCORE);
-	
-		
+	HIGHSCORE=HIGHSCORE
+	return HIGHSCORE;
 	
 	}
-checkLocalStorage();
+
+
+
 
 function CreateLocalStorage(){
 	let player={
@@ -377,14 +380,14 @@ function checkLocalStorage(){
 	}
 }
 
-function updateLocalStorageHighscore(HighScore){
+function UpdateLocalStorageHighscore(Highscore){
 	let updateLocal=JSON.parse(localStorage.getItem("player"))
-	updateLocal.highscore=HighScore;
+	updateLocal.highscore=Highscore
 	localStorage.setItem("player",JSON.stringify(updateLocal))
-	
+
 }
 
-function updateLocalStorageHighscoreMatches(){
+function updateLocalStorageMatches(){
 	let updateLocal=JSON.parse(localStorage.getItem("player"))
 	updateLocal.matches++
 	localStorage.setItem("player",JSON.stringify(updateLocal))
