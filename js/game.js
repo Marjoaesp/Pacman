@@ -36,7 +36,6 @@ function blinkHelp() {
 function initGame(newgame) { 
 
 	if (newgame) {
-		updateLocalStorageMatches();
 		stopPresentation();
 		stopTrailer();
 	
