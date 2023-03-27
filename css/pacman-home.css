@@ -132,3 +132,41 @@
 @media screen and (max-height:480px), screen and (min-device-height : 320px) and (max-device-height : 480px) { 
 
 }
+
+
+
+.PopUp-Container{
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0; left: 0;
+	background-color: rgba(144, 148,150, 0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+}
+.PopUp-Content{
+ width: 100%;
+ max-width: 400px;
+ padding: 20px;
+ background-color: #fff200;
+ border-radius: 4px;
+}
+.text-PopUp{
+	color: #000;
+
+}
+
+
+.PopUp-Content .button-Install{
+	padding-left: 25%;
+	padding-bottom: 5%;
+	font-size: 20px;
+}
+.PopUp-Content .button-Close{
+	padding-left: 55%;
+	
+	font-size: 20px;
+}
+	

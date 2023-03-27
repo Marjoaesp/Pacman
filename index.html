@@ -27,7 +27,8 @@
 
 		<link rel="stylesheet" type="text/css" href="css/pacman.css" />
 		<link rel="stylesheet" type="text/css" href="css/pacman-home.css" />
-	
+		
+
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<!--<script type="text/javascript" src="js/jquery-mobile.js"></script>-->
 		<script type="text/javascript" src="js/jquery-buzz.js"></script>
@@ -194,6 +195,7 @@
 			<h2>Help</h2>
 			<table align="center" border="0" cellPadding="2" cellSpacing="0">
 				<tbody>
+
 					<tr><td>Arrow Left : </td><td>Move Left</td></tr>
 					<tr><td>Arrow Right : </td><td>Move Right</td></tr>
 					<tr><td>Arrow Down : </td><td>Move Down</td></tr>
@@ -205,6 +207,18 @@
 		</div>
 	
 		<div id="home">
+			<input type="checkbox" id="button-PopUp">
+			<div class="PopUp-Container">
+				<div class="PopUp-Content">
+					<h2 class="text-PopUp">Instala nuestra aplicacion para tu dispositivo</h2>
+					<div class="button-Close">
+						<label class="text-PopUp" for="button-PopUp">Cerrar</label>
+					</div>
+					<div class="button-Install">
+						<label class="text-PopUp" for="button-PopUp">Instalar</label>
+					</div>
+				</div>
+			</div>
 			<h1>pac-man</h1>
 			<h3>Lucio PANEPINTO<br><em>2015</em></h3>
 			<canvas id="canvas-home-title-pacman"></canvas>
@@ -220,6 +234,8 @@
 			<a class="sound" href="javascript:void(0);" data-sound="on"><img src="img/sound-on.png" alt="" border="0"></a>
 			<a class="github" target="_blank" href="https://github.com/luciopanepinto/pacman"><img src="img/github.png" alt="GitHub - Lucio PANEPINTO - Pac-Man"></a>
 			<a class="putchu" target="_top" href="http://www.putchu.be"><img src="http://www.putchu.be/img/intro/player.png" height="95px" alt="Putchu">www.putchu.be</a>
+			
+			
 		</div>
 	
 		<div id="panel">
