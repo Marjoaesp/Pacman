@@ -4,9 +4,7 @@ const buttonInstall = document.getElementById("install");
 var displayPopUp = document.querySelector(".PopUp-Container");
 
 console.log(buttonInstall)
-if(typeof navigator.serviceWorker !== "undefined"){
-    navigator.serviceWorker.register("sw.js")
-}
+
 
 buttonInstall.addEventListener('click', async () => {
     console.log('👍', 'butInstall-clicked');
