@@ -1,6 +1,9 @@
 // Initialize deferredPrompt for use later to show browser install prompt.
 let deferredPrompt;
-const buttonInstall = document.getElementById("#install");
+const buttonInstall = document.querySelector("#install");
+var displayPopUp = document.querySelector(".PopUp-Container");
+
+console.log(buttonInstall)
 
 window.addEventListener('beforeinstallprompt', (e) => {
   // Prevent the mini-infobar from appearing on mobile
@@ -45,3 +48,7 @@ buttonInstall.addEventListener('click', async () => {
     // Log display mode change to analytics
     console.log('DISPLAY_MODE_CHANGED', displayMode);
   });
+
+  function hideInstallPromotion(){
+    displayPopUp.style.display="none";
+  }

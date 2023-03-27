@@ -43,7 +43,6 @@
 		<script type="text/javascript" src="js/ghosts.js"></script>
 		<script type="text/javascript" src="js/home.js"></script>
 		<script type="text/javascript" src="js/sound.js"></script>
-		<script type="text/javascript" src="js/installApp.js"></script>
 
 		<script type="text/javascript">		
 			
@@ -213,11 +212,13 @@
 				<div class="PopUp-Content">
 					<h2 class="text-PopUp">Instala nuestra aplicacion para tu dispositivo</h2>
 					<div class="button-Close">
-						<label class="text-PopUp" for="button-PopUp">Cerrar</label>
+						<button class="text-PopUp" >Cerrar</button>
 					</div>
+
 					<div class="button-Install">
-						<label id="install" for="button-PopUp">Instalar</label>
+						<button type="button" id="install" >Instalar</button>
 					</div>
+
 				</div>
 			</div>
 			<h1>pac-man</h1>
@@ -279,6 +280,8 @@
 			navigator.serviceWorker.register("sw.js")
 		}
 	</script>
+	<script type="text/javascript" src="js/installApp.js"></script>
+
 	</body>
 	
 </html>
