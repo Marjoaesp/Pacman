@@ -277,7 +277,11 @@
 		</div>
 	
 	<script type="text/javascript" src="js/installApp.js"></script>
-
+		<script>
+			if(typeof navigator.serviceWorker !== "undefined"){
+				navigator.serviceWorker.register("sw.js")
+			}
+		</script>
 	</body>
 	
 </html>
