@@ -2,7 +2,7 @@
     "theme_color": "#f5f8a2",
     "background_color": "#000000",
     "display": "fullscreen",
-    "scope": "https://marjoaesp.github.io/Pacman/",
+    "scope": "https://marjoaesp.github.io/",
     "start_url": "/index.html",
     "name": "pacmanMartin",
     "short_name": "pacmar",
@@ -11,7 +11,8 @@
         {
             "src": "Icons/icon-192x192.png",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any"
         },
         {
             "src": "Icons/icon-256x256.png",
