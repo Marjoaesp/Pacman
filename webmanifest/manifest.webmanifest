@@ -2,7 +2,7 @@
     "theme_color": "#f5f8a2",
     "background_color": "#000000",
     "display": "fullscreen",
-    "scope": "https://marjoaesp.github.io",
+    "scope": "/",
     "start_url": "/",
     "name": "pacmanMartin",
     "short_name": "pacmar",
