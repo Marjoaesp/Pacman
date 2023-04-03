@@ -3,7 +3,7 @@
     "background_color": "#000000",
     "display": "fullscreen",
     "scope": "https://marjoaesp.github.io/",
-    "start_url": "/index.html",
+    "start_url": "https://marjoaesp.github.io/",
     "name": "pacmanMartin",
     "short_name": "pacmar",
     "description": "pacmanManifest",
