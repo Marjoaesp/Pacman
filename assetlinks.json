@@ -1,0 +1,6 @@
+[{
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target" : { "namespace": "android_app", "package_name": "io.github.marjoaesp.twa",
+                     "sha256_cert_fingerprints": ["E1:78:08:CD:11:DD:7D:E1:A6:71:F3:CE:0C:83:F2:09:59:84:21:60:2A:CF:FC:3E:ED:E0:EF:92:76:FA:0D:06"] }
+      }
+]
