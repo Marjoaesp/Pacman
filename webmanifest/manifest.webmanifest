@@ -1,0 +1,33 @@
+{
+    "theme_color": "#f5f8a2",
+    "background_color": "#000000",
+    "display": "fullscreen",
+    "scope": "https://marjoaesp.github.io/",
+    "start_url": "/index.html",
+    "name": "pacmanMartin",
+    "short_name": "pacmar",
+    "description": "pacmanManifest",
+    "icons": [
+        {
+            "src": "Icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "Icons/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "Icons/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "Icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
