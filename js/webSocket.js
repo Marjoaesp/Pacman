@@ -1,10 +1,5 @@
-const buttonInstall = document.getElementById("install");
-webSocket = new WebSocket(url, protocols);
 
-const exampleSocket = new WebSocket(
-    "wss://www.example.com/socketPacman",
-    "protocolOne"
-  );
+const exampleSocket = new WebSocket("wss://www.example.com/socketPacman");
 exampleSocket.send("Here's some text that the server is urgently awaiting!");
 
   
