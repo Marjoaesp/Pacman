@@ -13,6 +13,8 @@ buttonInstall.addEventListener('click', async () => {
       // The deferred prompt isn't available.
       return;
     }
+    hidePopUp();
+
     // Show the install prompt.
     promptEvent.prompt();
     // Log the result
@@ -31,3 +33,8 @@ buttonInstall.addEventListener('click', async () => {
     window.deferredPrompt = null;
   });
 
+function hidePopUp(){
+  displayPopUp.style.display="block";
+  initGame(true);
+}
+  
