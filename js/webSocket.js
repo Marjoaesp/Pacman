@@ -1,3 +1,5 @@
+const buttonInstall = document.getElementById("install");
+webSocket = new WebSocket(url, protocols);
 
 const exampleSocket = new WebSocket(
     "wss://www.example.com/socketserver",
