@@ -1,5 +1,5 @@
 
-const exampleSocket = new WebSocket("wss://ucpgames-api.azurewebsites.net/multiplayer");
+const exampleSocket = new WebSocket("wss://ucpgames-api.azurewebsites.net/echo");
 
 
 exampleSocket.onopen = (event) => {
