@@ -38,9 +38,10 @@ function initGame(newgame) {
 	if (newgame) {
 		stopPresentation();
 		stopTrailer();
-	
+
 		HOME = false;
 		GAMEOVER = false;
+		
 
 		$('#help').fadeOut("slow");
 		
@@ -96,7 +97,6 @@ function initGame(newgame) {
 	drawGhosts();
 	
 	lifes();
-	
 	ready();
 }
 
@@ -373,6 +373,7 @@ function CreateLocalStorage(){
 
 }	
 var localStorageWasCreated=false;
+
 function checkLocalStorage(){
 	if(localStorage.getItem("player")== null || undefined){
 		CreateLocalStorage();
@@ -385,7 +386,7 @@ function UpdateLocalStorageHighscore(Highscore){
 	let updateLocal=JSON.parse(localStorage.getItem("player"))
 	updateLocal.highscore=Highscore
 	localStorage.setItem("player",JSON.stringify(updateLocal))
-
+	return Highscore;
 }
 
 function updateLocalStorageMatches(){
@@ -394,10 +395,16 @@ function updateLocalStorageMatches(){
 	updateLocal.matches++
 	localStorage.setItem("player",JSON.stringify(updateLocal))
 	}
-	
-	
 }
 
 
 
 
+exampleSocket.onmessage = (event) => {
+    const time = new Date();
+	exampleSocket.send(JSON.stringify(player));
+	console.log(event.data);
+
+    console.log(time, "Highscore: " + Highscore)
+	
+  };
