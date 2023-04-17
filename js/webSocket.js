@@ -1,14 +1,13 @@
+
 const exampleSocket = new WebSocket(
     "wss://www.example.com/socketserver",
     "protocolOne"
   );
-
+exampleSocket.send("Here's some text that the server is urgently awaiting!");
+  
   exampleSocket.onopen = (event) => {
     exampleSocket.send("Here's some text that the server is urgently awaiting!");
   };
-
-  exampleSocket.send("Here's some text that the server is urgently awaiting!");
-
   function sendText() {
   // Construct a msg object containing the data the server needs to process the message from the chat client.
   const msg = {
