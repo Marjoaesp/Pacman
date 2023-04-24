@@ -377,9 +377,9 @@ var localStorageWasCreated=false;
 function checkLocalStorage(){
 	if(localStorage.getItem("player")== null || undefined){
 		CreateLocalStorage();
-		localStorageWasCreated=true;
+		return localStorageWasCreated=true;
 	}
-	return localStorageWasCreated;
+	
 }
 
 function UpdateLocalStorageHighscore(Highscore){
