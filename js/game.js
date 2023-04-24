@@ -390,5 +390,23 @@ function UpdateLocalStorageHighscore(Highscore){
 }
 
 
+exampleSocket.onopen = (event) => {
+
+    exampleSocket.send("server connected");
+    const time = new Date();
+	let playerSocket=JSON.parse(localStorage.getItem("player"))
+
+	exampleSocket.send(JSON.stringify(playerSocket));
+	console.log(time, "Highscore: " + Highscore);
+
+
+ };
+
+
+
+exampleSocket.onmessage = (event) => {
+    console.log(event.data);
+};
+
 
 
