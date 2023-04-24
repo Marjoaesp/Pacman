@@ -9,7 +9,7 @@ exampleSocket.onopen = (event) => {
 	let playerSocket=JSON.parse(localStorage.getItem("player"))
 
 	exampleSocket.send(JSON.stringify(playerSocket));
-	console.log(time, "Highscore: " + HIGHSCORE);
+	console.log(time, "Highscore: " + highscore);
 
 
  };
