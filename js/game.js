@@ -399,12 +399,3 @@ function updateLocalStorageMatches(){
 
 
 
-
-exampleSocket.onmessage = (event) => {
-    const time = new Date();
-	exampleSocket.send(JSON.stringify(player));
-	console.log(event.data);
-
-    console.log(time, "Highscore: " + Highscore)
-	
-  };
