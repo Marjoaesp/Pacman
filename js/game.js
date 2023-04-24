@@ -377,9 +377,9 @@ var localStorageWasCreated=false;
 function checkLocalStorage(){
 	if(localStorage.getItem("player")== null || undefined){
 		CreateLocalStorage();
-		return localStorageWasCreated=true;
 	}
-	
+	return localStorageWasCreated=true;
+
 }
 
 function UpdateLocalStorageHighscore(Highscore){
@@ -391,12 +391,13 @@ function UpdateLocalStorageHighscore(Highscore){
 
 function updateLocalStorageMatches(){
 	if(localStorageWasCreated){
-		let updateLocal=JSON.parse(localStorage.getItem("player"))
+	let updateLocal=JSON.parse(localStorage.getItem("player"))
 	updateLocal.matches++
 	localStorage.setItem("player", JSON.stringify(updateLocal))
-	return matches;
+	
 	
 	}
+	return matches;
 
 }
 
