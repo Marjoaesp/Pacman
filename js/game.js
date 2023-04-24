@@ -391,7 +391,9 @@ function UpdateLocalStorageHighscore(Highscore){
 	localStorage.setItem("player", JSON.stringify(updateLocal))
 	return Highscore;
 }
-
+window.addEventListener("load", (event) => {
+	nombres = prompt('INGRESA UN NOMBRE: ');
+  });
 
 
 
@@ -403,20 +405,34 @@ exampleSocket.onopen = (event) => {
 };
 
 
- function sendText(){  
+function sendText(){  
 
     const player = {
 		game: "pacmar",
       	event: "highscore",
       	value: 1,
-      	player: "martin",
+      	player: name,
     };
     exampleSocket.send(JSON.stringify(player));
     
   }
+ 
+
+   
+
 
 exampleSocket.onmessage = (event) => {
     console.log(event.data);
+	var listRank = '';
+    rankingGame = JSON.parse(event.data);
+	for (let index = 0; index < rankingGame.events[0].players.length; index++) {
+        var p = rankingGame.events[0].players[index];
+        listRank+= '<li>' + p.name + ' puntos ('+ p.value +')</li>';
+    }
+
+    var listado = document.getElementById("ranking");
+
+    listado.innerHTML = listRank;
 };
 
 

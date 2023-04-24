@@ -174,3 +174,17 @@
 	font-size: 20px;
 }
 	
+#ranking-container #ranking{
+	background-color: #fff200;
+	color: #000 !important;
+	top: 0; left: 0;
+	display: flex;
+	justify-content: left;
+	align-items: left;
+	z-index: 100;
+}
+
+#ranking li{
+
+	color: #000 !important;
+}
