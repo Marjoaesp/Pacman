@@ -379,7 +379,7 @@ function checkLocalStorage(){
 		CreateLocalStorage();
 		localStorageWasCreated=true;
 	}
-	
+	return localStorageWasCreated;
 }
 
 function UpdateLocalStorageHighscore(Highscore){
