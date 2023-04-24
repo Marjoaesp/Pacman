@@ -111,7 +111,6 @@ function eatFruit() {
 	else if (FRUIT === "galboss")  s = 2000;
 	else if (FRUIT === "bell")  s = 3000;
 	else if (FRUIT === "key")  s = 5000;
-	sendText();
 	score(s, "fruit");
 	cancelFruit();
 }
