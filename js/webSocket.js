@@ -4,8 +4,9 @@ const exampleSocket = new WebSocket("wss://ucpgames-api.azurewebsites.net/multip
 exampleSocket.onopen = (event) => {
 
     exampleSocket.send("server connected");
-    console.log(time, event.data);
     const time = new Date();
+
+    console.log(time, event.data);
 };
 
  function sendText(){  
