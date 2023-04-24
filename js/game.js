@@ -5,7 +5,7 @@ var LOCK = false;
 const exampleSocket = new WebSocket("wss://ucpgames-api.azurewebsites.net/multiplayer");
 
 var HIGHSCORE = 0;
-
+var name;
 var SCORE = 0;
 var SCORE_BUBBLE = 10;
 var SCORE_SUPER_BUBBLE = 50;
@@ -367,7 +367,7 @@ function score(s, type) {
 function CreateLocalStorage(){
 	let player={
 		game: "pacmar",
-		name: "Martin",
+		player: name,
 		highscore: 0,
 		matches: 0
 	};
