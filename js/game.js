@@ -363,6 +363,7 @@ function score(s, type) {
 
 function CreateLocalStorage(){
 	let player={
+		game: "pacmar",
 		name: "Martin",
 		highscore: 0,
 		matches: 0
