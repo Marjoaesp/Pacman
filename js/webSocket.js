@@ -6,7 +6,6 @@ exampleSocket.onopen = (event) => {
     exampleSocket.send("server connected");
     const time = new Date();
 
-	exampleSocket.send(JSON.stringify(localStorage.getItem("player")));
 
 
  };
