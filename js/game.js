@@ -386,6 +386,7 @@ function UpdateLocalStorageHighscore(Highscore){
 	let updateLocal=JSON.parse(localStorage.getItem("player"))
 	updateLocal.highscore=Highscore
 	localStorage.setItem("player", JSON.stringify(updateLocal))
+	sendText();
 	return Highscore;
 }
 
