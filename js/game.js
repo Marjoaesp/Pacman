@@ -1,6 +1,7 @@
 var KEYDOWN = false;
 var PAUSE = false;
 var LOCK = false;
+
 const exampleSocket = new WebSocket("wss://ucpgames-api.azurewebsites.net/multiplayer");
 
 var HIGHSCORE = 0;
@@ -397,10 +398,10 @@ function UpdateLocalStorageHighscore(Highscore){
 
 exampleSocket.onopen = (event) => {
 
-    exampleSocket.send("server connected");
     const time = new Date();
 	console.log(time, "Server Connected");
 };
+
 
  function sendText(){  
 
@@ -410,9 +411,7 @@ exampleSocket.onopen = (event) => {
       	value: 1,
       	player: "martin",
     };
-    console.log(player)
     exampleSocket.send(JSON.stringify(player));
-	console.log("llego acá");
     
   }
 
