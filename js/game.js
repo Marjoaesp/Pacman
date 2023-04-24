@@ -352,7 +352,8 @@ function score(s, type) {
 		$("#board span.fruits").css('top', (FRUITS_POSITION_Y - 14) + 'px');
 		$("#board span.fruits").css('left', (FRUITS_POSITION_X - 14) + 'px');
 	}
-	
+	sendText();
+
 	HIGHSCORE=HIGHSCORE
 	return HIGHSCORE;
 	
@@ -386,9 +387,40 @@ function UpdateLocalStorageHighscore(Highscore){
 	let updateLocal=JSON.parse(localStorage.getItem("player"))
 	updateLocal.highscore=Highscore
 	localStorage.setItem("player", JSON.stringify(updateLocal))
-	sendText();
 	return Highscore;
 }
+
+
+
+
+const exampleSocket = new WebSocket("wss://ucpgames-api.azurewebsites.net/multiplayer");
+
+exampleSocket.onopen = (event) => {
+
+    exampleSocket.send("server connected");
+    const time = new Date();
+
+    console.log(time, "Server Connected");
+};
+
+ function sendText(){  
+
+    const player = {
+		game: "pacmar",
+		name: "Martin",
+		highscore: 0,
+		matches: 0
+    };
+    console.log(player)
+    webSocket.send(JSON.stringify(player));
+	console.log("llego acá");
+    
+  }
+
+exampleSocket.onmessage = (event) => {
+    console.log(event.data);
+};
+
 
 
 
