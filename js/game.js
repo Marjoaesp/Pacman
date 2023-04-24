@@ -412,7 +412,7 @@ exampleSocket.onopen = (event) => {
 		matches: 0
     };
     console.log(player)
-    webSocket.send(JSON.stringify(player));
+    exampleSocket.send(JSON.stringify(player));
 	console.log("llego acá");
     
   }
