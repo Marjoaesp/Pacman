@@ -9,7 +9,6 @@ console.log(buttonInstall)
 buttonInstall.addEventListener('click', async () => {
     console.log('👍', 'butInstall-clicked');
     hidePopUp();
-    AlreadyInstalled=true;
     const promptEvent = window.deferredPrompt;
     if (!promptEvent) {
       // The deferred prompt isn't available.
