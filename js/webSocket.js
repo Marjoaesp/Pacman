@@ -6,7 +6,7 @@ exampleSocket.onopen = (event) => {
     exampleSocket.send("server connected");
     const time = new Date();
 
-    console.log(time, event.data);
+    console.log(time, "Server Connected");
 };
 
  function sendText(){  
