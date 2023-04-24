@@ -38,7 +38,7 @@ function initGame(newgame) {
 	if (newgame) {
 		stopPresentation();
 		stopTrailer();
-
+		updateLocalStorageMatches();
 		HOME = false;
 		GAMEOVER = false;
 		
@@ -385,16 +385,16 @@ function checkLocalStorage(){
 function UpdateLocalStorageHighscore(Highscore){
 	let updateLocal=JSON.parse(localStorage.getItem("player"))
 	updateLocal.highscore=Highscore
-	localStorage.setItem("player",JSON.stringify(updateLocal))
+	localStorage.setItem("player", JSON.stringify(updateLocal))
 	return Highscore;
 }
 
 function updateLocalStorageMatches(){
-	if(localStorageWasCreated){
 	let updateLocal=JSON.parse(localStorage.getItem("player"))
 	updateLocal.matches++
-	localStorage.setItem("player",JSON.stringify(updateLocal))
-	}
+	localStorage.setItem("player", JSON.stringify(updateLocal))
+	return matches;
+	
 }
 
 
