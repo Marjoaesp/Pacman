@@ -390,11 +390,14 @@ function UpdateLocalStorageHighscore(Highscore){
 }
 
 function updateLocalStorageMatches(){
-	let updateLocal=JSON.parse(localStorage.getItem("player"))
+	if(localStorageWasCreated){
+		let updateLocal=JSON.parse(localStorage.getItem("player"))
 	updateLocal.matches++
 	localStorage.setItem("player", JSON.stringify(updateLocal))
 	return matches;
 	
+	}
+
 }
 
 
