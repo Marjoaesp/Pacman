@@ -169,7 +169,28 @@ function movePacman(direction) {
 		tryMovePacmanCancel();
 	}
 }
+window.addEventListener('deviceorientation', handleOrientation);
 
+function handleOrientation(event) {
+  const alpha = event.alpha;
+  const beta = event.beta;
+  const gamma = event.gamma;
+  console.log(alpha,beta,gamma)
+
+    if(gamma>20){
+        direction=1;
+    }else if(gamma >-20){
+        direction=2;
+
+    }else if(beta >20 ){
+        direction=3;
+
+    }else if(beta >-20){
+        direction=4;
+
+    }
+
+}
 function canMovePacman(direction) { 
 	
 	var positionX = PACMAN_POSITION_X;
