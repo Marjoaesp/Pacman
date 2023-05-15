@@ -189,7 +189,7 @@ function handleOrientation(event) {
         direction=4;
 
     }
-
+	return direction;
 }
 function canMovePacman(direction) { 
 	
