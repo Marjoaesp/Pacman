@@ -19,7 +19,8 @@ var PACMAN_KILLING_TIMER = -1;
 var PACMAN_KILLING_SPEED = 70;
 var PACMAN_RETRY_SPEED = 2100;
 var PACMAN_DEAD = false;
-
+var GAMMA;
+var BETA;
 function initPacman() { 
 	var canvas = document.getElementById('canvas-pacman');
 	canvas.setAttribute('width', '550');
@@ -175,21 +176,10 @@ function handleOrientation(event) {
   const alpha = event.alpha;
   const beta = event.beta;
   const gamma = event.gamma;
+  GAMMA=gamma;
+  BETA=beta;
   console.log(alpha,beta,gamma)
-
-    if(gamma>20){
-        direction=1;
-    }else if(gamma >-20){
-        direction=2;
-
-    }else if(beta >20 ){
-        direction=3;
-
-    }else if(beta >-20){
-        direction=4;
-
-    }
-	return direction;
+  return GAMMA, BETA;
 }
 function canMovePacman(direction) { 
 	
