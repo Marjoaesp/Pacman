@@ -190,16 +190,16 @@ function canMovePacman(direction) {
 	
 	if (positionX === 276 && positionY === 204 && direction === 2) return false;
 	
-	if ( direction === 1 || GAMMA>=30) { 
+	if ( direction === 1 ) { 
 		positionX += PACMAN_POSITION_STEP;
 		
 
 
-	} else if ( direction === 2 || GAMMA>= -30 ) { 
+	} else if ( direction === 2  ) { 
 		positionY += PACMAN_POSITION_STEP;
-	} else if ( direction === 3 ||BETA>=30 ) { 
+	} else if ( direction === 3 ) { 
 		positionX -= PACMAN_POSITION_STEP;
-	} else if ( direction === 4||BETA>= -30  ) { 
+	} else if ( direction === 4 ) { 
 		positionY -= PACMAN_POSITION_STEP;
 	}
 	
