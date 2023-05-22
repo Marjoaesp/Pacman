@@ -186,14 +186,25 @@ function handleOrientation(event) {
 
 function movePacmanWithGyro(){
 	if (GAMMA>=30 ) { 
-		positionX += PACMAN_POSITION_STEP;
+		movePacmanWithGyro();
+
+		direction === 1
 		
 	} else if ( GAMMA>= -30  ) { 
-		positionY += PACMAN_POSITION_STEP;
-	} else if ( BETA>= 30 ) { 
-		positionX -= PACMAN_POSITION_STEP;
+		movePacmanWithGyro();
+
+		direction === 3
+
+	} else if ( BETA>= 30 ) 
+	{ 
+		movePacmanWithGyro();
+
+		direction === 2;
+		
 	} else if ( BETA>= -30 ) { 
-		positionY -= PACMAN_POSITION_STEP;
+		movePacmanWithGyro();
+
+		direction === 4;
 	}
 }
 
