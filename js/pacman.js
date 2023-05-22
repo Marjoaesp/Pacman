@@ -200,19 +200,19 @@ function movePacmanWithGyro(){
 	if (GAMMA>=30 ) { 
 		console.log("Moveright")
 
-		
+		direction === 4
 	} else if ( GAMMA>= -30  ) { 
 
 		console.log("Moveleft")
-
+		direction === 3
 	} else if ( BETA>= 30 ) 
 	{ 
-		
+		direction === 2
 		console.log("Moveup")
 
 	} else if ( BETA>= -30 ) { 
 		console.log("Movedowm")
-
+		direction === 1
 	}
 }
 
