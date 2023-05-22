@@ -31,22 +31,23 @@ function handleOrientation(event) {
   
   GAMMA=gamma;
   BETA=beta;
-if (GAMMA>=30 ) { 
+
+if (GAMMA>=10 ) { 
 	console.log("Moveright")
 	movePacman(1);
 
-} else if ( GAMMA>= -30  ) { 
-	movePacman(2);
+} else if ( GAMMA<= -10  ) { 
+	movePacman(3);
 
 	console.log("Moveleft")
 
-} else if ( BETA>= 30 ) 
+} else if ( BETA>= 10 ) 
 { 
-	movePacman(3);
+	movePacman(2);
 
 	console.log("Moveup")
 
-} else if ( BETA>= -30 ) { 
+} else if ( BETA<= -10 ) { 
 	console.log("Movedowm")
 	movePacman(4);
 
