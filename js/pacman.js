@@ -186,25 +186,21 @@ function handleOrientation(event) {
 
 function movePacmanWithGyro(){
 	if (GAMMA>=30 ) { 
-		movePacmanWithGyro();
+		console.log("Moveright")
 
-		direction === 1
 		
 	} else if ( GAMMA>= -30  ) { 
-		movePacmanWithGyro();
 
-		direction === 3
+		console.log("Moveleft")
 
 	} else if ( BETA>= 30 ) 
 	{ 
-		movePacmanWithGyro();
-
-		direction === 2;
 		
-	} else if ( BETA>= -30 ) { 
-		movePacmanWithGyro();
+		console.log("Moveup")
 
-		direction === 4;
+	} else if ( BETA>= -30 ) { 
+		console.log("Movedowm")
+
 	}
 }
 
