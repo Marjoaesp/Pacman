@@ -176,11 +176,13 @@ function handleOrientation(event) {
   const alpha = event.alpha;
   const beta = event.beta;
   const gamma = event.gamma;
-  GAMMA=gamma;
-  BETA=beta;
-  console.log(alpha,beta,gamma)
+  GAMMA=event.gamma;
+  BETA=event.beta;
+  console.log(GAMMA, BETA);
   return GAMMA, BETA;
 }
+
+
 function canMovePacman(direction) { 
 	
 	var positionX = PACMAN_POSITION_X;
@@ -188,13 +190,16 @@ function canMovePacman(direction) {
 	
 	if (positionX === 276 && positionY === 204 && direction === 2) return false;
 	
-	if ( direction === 1 ) { 
+	if ( direction === 1 || GAMMA>=30) { 
 		positionX += PACMAN_POSITION_STEP;
-	} else if ( direction === 2 ) { 
+		
+
+
+	} else if ( direction === 2 || GAMMA>= -30 ) { 
 		positionY += PACMAN_POSITION_STEP;
-	} else if ( direction === 3 ) { 
+	} else if ( direction === 3 ||BETA>=30 ) { 
 		positionX -= PACMAN_POSITION_STEP;
-	} else if ( direction === 4 ) { 
+	} else if ( direction === 4||BETA>= -30  ) { 
 		positionY -= PACMAN_POSITION_STEP;
 	}
 	
