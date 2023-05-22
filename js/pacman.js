@@ -21,18 +21,6 @@ var PACMAN_RETRY_SPEED = 2100;
 var PACMAN_DEAD = false;
 var GAMMA;
 var BETA;
-window.addEventListener('deviceorientation', handleOrientation);
-
-function handleOrientation(event) {
-  const alpha = event.alpha;
-  const beta = event.beta;
-  const gamma = event.gamma;
-  GAMMA=event.gamma;
-  BETA=event.beta;
-  console.log(GAMMA, BETA);
-  return GAMMA, BETA;
-}
-handleOrientation();
 function initPacman() { 
 	var canvas = document.getElementById('canvas-pacman');
 	canvas.setAttribute('width', '550');
@@ -195,26 +183,6 @@ function handleOrientation(event) {
 }
 
 
-
-function movePacmanWithGyro(){
-	if (GAMMA>=30 ) { 
-		console.log("Moveright")
-
-		direction === 4
-	} else if ( GAMMA>= -30  ) { 
-
-		console.log("Moveleft")
-		direction === 3
-	} else if ( BETA>= 30 ) 
-	{ 
-		direction === 2
-		console.log("Moveup")
-
-	} else if ( BETA>= -30 ) { 
-		console.log("Movedowm")
-		direction === 1
-	}
-}
 
 
 function canMovePacman(direction) { 

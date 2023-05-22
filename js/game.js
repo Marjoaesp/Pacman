@@ -45,7 +45,6 @@ function initGame(newgame) {
 		
 
 		$('#help').fadeOut("slow");
-		movePacmanWithGyro();
 
 		
 		clearMessage();
@@ -188,7 +187,6 @@ function go() {
 	blinkSuperBubbles();
 
 	movePacman();
-   	movePacmanWithGyro();
 	moveGhosts();
 }
 function startTimes() { 
