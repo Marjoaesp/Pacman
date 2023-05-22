@@ -35,7 +35,7 @@ if (GAMMA>=30 ) {
 	console.log("Moveright")
 	movePacman(1);
 
-} else if ( GAMMA>= -30  ) { 
+} else if ( GAMMA<= -30  ) { 
 	movePacman(2);
 
 	console.log("Moveleft")
@@ -46,7 +46,7 @@ if (GAMMA>=30 ) {
 
 	console.log("Moveup")
 
-} else if ( BETA>= -30 ) { 
+} else if ( BETA<= -30 ) { 
 	console.log("Movedowm")
 	movePacman(4);
 
