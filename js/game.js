@@ -45,7 +45,7 @@ function initGame(newgame) {
 		
 
 		$('#help').fadeOut("slow");
-		
+
 		
 		clearMessage();
 		$("#home").hide();
@@ -77,6 +77,7 @@ function initGame(newgame) {
 		ctx.arc(x, y, 4, 0, 2 * Math.PI, false);
 		ctx.fill();
 		ctx.closePath();
+		
 	}
 
 	initBoard();
@@ -96,7 +97,7 @@ function initGame(newgame) {
 	
 	initGhosts();
 	drawGhosts();
-	
+
 	lifes();
 	ready();
 }
@@ -186,7 +187,6 @@ function go() {
 	blinkSuperBubbles();
 
 	movePacman();
-
 	moveGhosts();
 }
 function startTimes() { 
