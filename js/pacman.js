@@ -21,6 +21,18 @@ var PACMAN_RETRY_SPEED = 2100;
 var PACMAN_DEAD = false;
 var GAMMA;
 var BETA;
+window.addEventListener('deviceorientation', handleOrientation);
+
+function handleOrientation(event) {
+  const alpha = event.alpha;
+  const beta = event.beta;
+  const gamma = event.gamma;
+  GAMMA=event.gamma;
+  BETA=event.beta;
+  console.log(GAMMA, BETA);
+  return GAMMA, BETA;
+}
+handleOrientation();
 function initPacman() { 
 	var canvas = document.getElementById('canvas-pacman');
 	canvas.setAttribute('width', '550');
