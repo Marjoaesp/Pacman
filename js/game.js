@@ -77,6 +77,8 @@ function initGame(newgame) {
 		ctx.arc(x, y, 4, 0, 2 * Math.PI, false);
 		ctx.fill();
 		ctx.closePath();
+		movePacmanWithGyro();
+
 	}
 
 	initBoard();
