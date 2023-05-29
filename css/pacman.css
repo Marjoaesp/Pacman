@@ -433,3 +433,8 @@ h3 {
 		top: 347px;
 	}
 }
+
+#elemento {
+	transform-origin: center center; /* Establece el punto de origen de la transformación en el centro del elemento */
+	transform: scale(1); /* Establece la escala inicial del elemento */
+  }
