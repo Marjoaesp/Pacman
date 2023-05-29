@@ -52,6 +52,7 @@ if (GAMMA>=30 ) {
 	movePacman(4);
 
 }
+
 }
 function initPacman() { 
 	var canvas = document.getElementById('canvas-pacman');
