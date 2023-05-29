@@ -435,14 +435,8 @@ h3 {
 }
 
 #elemento {
-	width: 200px;
-	height: 200px;
-	background-color: red;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform-origin: center center;
-	transform: translate(-50%, -50%) scale(1);
+	transform-origin: 0 0; /* Establece el origen de la transformación en la esquina superior izquierda */
+  transform: scale(1); /* Establece la escala inicial del elemento */
 }
 
 #Version{
