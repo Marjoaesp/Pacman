@@ -1,6 +1,6 @@
 if ('ontouchstart' in window || navigator.maxTouchPoints) {
-    var pinchElement = document.getElementById('#contenedor');
-    var circleElement = document.getElementById('#circle');
+    var pinchElement = document.getElementById('contenedor');
+    var circleElement = document.getElementById('circle');
   
     var initialDistance = 0;
     var initialScale = 1;
