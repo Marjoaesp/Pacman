@@ -148,6 +148,7 @@ function eraseBubble(t, x, y) {
 	} else { 
 		size = BUBBLES_SIZE;
 	}
+    hacerVibrar();
 
 	ctx.clearRect(x - size, y - size, (size + 1) * 2, (size + 1) * 2);
 }
