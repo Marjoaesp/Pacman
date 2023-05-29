@@ -1,4 +1,4 @@
-var element = document.getElementById('elemento');
+var element = document.getElementById('#elemento');
     var initialDistance = 0;
     var initialScale = 1;
     var initialX = 0;
