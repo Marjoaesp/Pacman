@@ -448,6 +448,7 @@ h3 {
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
 	transition: transform 0.3s;
+	pointer-events: none; /* Evita que el círculo afecte a los eventos táctiles en el contenedor */
   }
 
 #Version{

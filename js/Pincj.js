@@ -1,6 +1,6 @@
 if ('ontouchstart' in window || navigator.maxTouchPoints) {
-    var pinchElement = document.getElementById('contenedor');
-    var circleElement = document.getElementById('circle');
+    var pinchElement = document.getElementById('#contenedor');
+    var circleElement = document.getElementById('#circle');
   
     var initialDistance = 0;
     var initialScale = 1;
@@ -13,10 +13,10 @@ if ('ontouchstart' in window || navigator.maxTouchPoints) {
   
         if (initialDistance === 0) {
           initialDistance = distance;
-          initialScale = 0;
+          circleElement.style.transform = 'translate(-50%, -50%) scale(1)';
         }
   
-        var scale = initialScale + (distance - initialDistance) / 100;
+        var scale = 1 + (distance - initialDistance) / 100;
         circleElement.style.transform = 'translate(-50%, -50%) scale(' + scale + ')';
       }
     }
@@ -24,7 +24,6 @@ if ('ontouchstart' in window || navigator.maxTouchPoints) {
     function handleRelease(event) {
       if (event.touches.length === 0) {
         initialDistance = 0;
-        initialScale = 1;
         circleElement.style.transform = 'translate(-50%, -50%) scale(0)';
       }
     }
