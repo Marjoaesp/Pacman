@@ -4,10 +4,10 @@ var initialScale = 1;
 
 // Función para calcular la distancia entre los primeros dos puntos de contacto
 function calculateDistance(touches) {
-  var x1 = touches[0].pageX;
-  var y1 = touches[0].pageY;
-  var x2 = touches[1].pageX;
-  var y2 = touches[1].pageY;
+  var x1 = touches[0].clientX;
+  var y1 = touches[0].clientY;
+  var x2 = touches[1].clientX;
+  var y2 = touches[1].clientY;
 
   return Math.hypot(x2 - x1, y2 - y1);
 }
