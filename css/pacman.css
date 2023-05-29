@@ -435,6 +435,9 @@ h3 {
 }
 
 #elemento {
+	position: relative;
+	width: 200px;
+	height: 200px;
 	transform-origin: 0 0; /* Establece el origen de la transformación en la esquina superior izquierda */
   transform: scale(1); /* Establece la escala inicial del elemento */
 }
