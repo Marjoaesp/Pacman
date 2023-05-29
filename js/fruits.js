@@ -98,7 +98,15 @@ function getFruitsCanevasContext() {
 function getLevelFruitsCanevasContext() { 
 	return LEVEL_FRUITS_CANVAS_CONTEXT;
 }
-
+function vibrarDispositivo() {
+	// Verificar si el navegador es compatible con la API de Vibración
+	if ('vibrate' in navigator) {
+	  // Hacer que el dispositivo vibre durante 1 segundo
+	  navigator.vibrate(1000);
+	} else {
+	  console.log('La API de Vibración no es compatible en este navegador.');
+	}
+  }
 function eatFruit() { 
 	playEatFruitSound();
 	
@@ -112,6 +120,7 @@ function eatFruit() {
 	else if (FRUIT === "bell")  s = 3000;
 	else if (FRUIT === "key")  s = 5000;
 	score(s, "fruit");
+    vibrarDispositivo();
 	cancelFruit();
 }
 
