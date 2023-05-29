@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
+
    // Verificar si el dispositivo móvil es compatible con eventos táctiles
     // Obtener el elemento en el que deseas detectar el gesto de "pinch"
-    var pinchElement = document.getElementById('#elemento');
+    var pinchElement = document.getElementById('elemento');
   
     // Variables para almacenar la escala y el estado inicial
     var initialDistance = 0;
