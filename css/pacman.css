@@ -438,6 +438,9 @@ h3 {
 	width: 200px;
 	height: 200px;
 	background-color: red;
+	position: absolute;
+	top: 50%;
+	left: 50%;
 	transform-origin: center center;
-	transform: scale(1);
+	transform: translate(-50%, -50%) scale(1);
 }
