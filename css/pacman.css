@@ -444,3 +444,8 @@ h3 {
 	transform-origin: center center;
 	transform: translate(-50%, -50%) scale(1);
 }
+
+#Version{
+	color: #fff;
+
+}
