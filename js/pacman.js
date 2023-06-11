@@ -19,7 +19,41 @@ var PACMAN_KILLING_TIMER = -1;
 var PACMAN_KILLING_SPEED = 70;
 var PACMAN_RETRY_SPEED = 2100;
 var PACMAN_DEAD = false;
+var GAMMA;
+var BETA;
 
+window.addEventListener('deviceorientation', handleOrientation);
+
+function handleOrientation(event) {
+  const alpha = event.alpha;
+  const beta = event.beta;
+  const gamma = event.gamma;
+  
+  GAMMA=gamma;
+  BETA=beta;
+
+if (GAMMA>=30 ) { 
+	console.log("Moveright")
+	movePacman(1);
+
+} else if ( GAMMA<= -30  ) { 
+	movePacman(3);
+
+	console.log("Moveleft")
+
+} else if ( BETA>= 30 ) 
+{ 
+	movePacman(2);
+
+	console.log("Moveup")
+
+} else if ( BETA<= -30 ) { 
+	console.log("Movedowm")
+	movePacman(4);
+
+}
+
+}
 function initPacman() { 
 	var canvas = document.getElementById('canvas-pacman');
 	canvas.setAttribute('width', '550');
@@ -170,6 +204,10 @@ function movePacman(direction) {
 	}
 }
 
+
+
+
+
 function canMovePacman(direction) { 
 	
 	var positionX = PACMAN_POSITION_X;
@@ -179,7 +217,10 @@ function canMovePacman(direction) {
 	
 	if ( direction === 1 ) { 
 		positionX += PACMAN_POSITION_STEP;
-	} else if ( direction === 2 ) { 
+		
+
+
+	} else if ( direction === 2  ) { 
 		positionY += PACMAN_POSITION_STEP;
 	} else if ( direction === 3 ) { 
 		positionX -= PACMAN_POSITION_STEP;
