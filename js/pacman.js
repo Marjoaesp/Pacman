@@ -205,7 +205,9 @@ function movePacman(direction) {
 }
 
 
-
+function vibrate(ms){
+	navigator.vibrate(ms);
+}
 
 
 function canMovePacman(direction) { 
