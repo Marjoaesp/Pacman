@@ -135,7 +135,7 @@
 				
 				$("body").keydown(function(e) { 
 				
-					if (HOME) { 
+					if (HOME && alreadyInstalled) { 
 						
 						initGame(true);
 						
@@ -207,18 +207,13 @@
 			</table>
 		</div>
 		<div id="home">
-			<div id="ChatboxContainer">
-
-				<input id="text" type="text" name="text" size="80" maxlength="256" placeholder="Chat with us!" autocomplete="off"onkeyup="handleKey(event)" disabled>
-
-
-			</div>
+			
 			<input type="checkbox" id="button-PopUp">
 			<div class="PopUp-Container">
 				<div class="PopUp-Content">
 					<h2 class="text-PopUp">Instala nuestra aplicacion para tu dispositivo</h2>
 					<div class="button-Close">
-						<button class="text-PopUp" >Cerrar</button>
+						<buttont type="button" id="close">Cerrar</button>
 					</div>
 
 					<div class="button-Install">

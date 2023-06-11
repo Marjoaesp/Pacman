@@ -1,15 +1,19 @@
 // Initialize deferredPrompt for use later to show browser install prompt.
 
 const buttonInstall = document.getElementById("install");
+const buttonClose = document.getElementById("close");
+
 var displayPopUp = document.querySelector(".PopUp-Container");
-AlreadyInstalled=false;
+var alreadyInstalled=false;
 console.log(buttonInstall)
 
-
+buttonClose.addEventListener('click', async()=>{
+  hidePopUp();
+  alreadyInstalled=true;
+  return alreadyInstalled=true;
+});
 buttonInstall.addEventListener('click', async () => {
     console.log('👍', 'butInstall-clicked');
-    hidePopUp();
-    AlreadyInstalled=true;
     const promptEvent = window.deferredPrompt;
     if (!promptEvent) {
       // The deferred prompt isn't available.
