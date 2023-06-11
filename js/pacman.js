@@ -212,7 +212,7 @@ function vibrate(ms){
 
 function canMovePacman(direction) { 
 	
-	var positionX = PACMAN_POSITION_X;
+	var positionX = PACMAN_POSITION_X;   
 	var positionY = PACMAN_POSITION_Y;
 	
 	if (positionX === 276 && positionY === 204 && direction === 2) return false;
