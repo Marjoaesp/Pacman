@@ -434,22 +434,9 @@ h3 {
 	}
 }
 
-#contenedor {
-	position: relative;
-  }
+
   
-  #circle {
-	width: 100px;
-	height: 100px;
-	background-color: red;
-	border-radius: 50%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) scale(0);
-	transition: transform 0.3s;
-	pointer-events: none; /* Evita que el círculo afecte a los eventos táctiles en el contenedor */
-  }
+  
 
 #Version{
 	color: #fff;
