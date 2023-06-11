@@ -98,9 +98,7 @@ function getFruitsCanevasContext() {
 function getLevelFruitsCanevasContext() { 
 	return LEVEL_FRUITS_CANVAS_CONTEXT;
 }
-function hacerVibrar(){
-    window.navigator.vibrate([1000]);
-  }
+
 function eatFruit() { 
 	playEatFruitSound();
 	
@@ -114,7 +112,7 @@ function eatFruit() {
 	else if (FRUIT === "bell")  s = 3000;
 	else if (FRUIT === "key")  s = 5000;
 	score(s, "fruit");
-	hacerVibrar();
+	vibrate(500);
 
 	cancelFruit();
 }
