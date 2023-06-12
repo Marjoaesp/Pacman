@@ -1,30 +1,52 @@
-document.addEventListener('touchstart', start, false);
-document.addEventListener('touchmove', move, false);
-var dist1=0;
+// Variables to keep track of initial and current touch positions
+let initialDistance = 0;
+let currentDistance = 0;
 
-function start(ev) {
-if (ev.targetTouches.length == 2) {//check if two fingers touched screen
-dist1 = Math.hypot( //get rough estimate of distance between two fingers
-ev.touches[0].pageX - ev.touches[1].pageX,
-ev.touches[0].pageY - ev.touches[1].pageY);
+// Function to calculate the distance between two touch points
+function calculateDistance(touches) {
+  const [x1, y1] = [touches[0].pageX, touches[0].pageY];
+  const [x2, y2] = [touches[1].pageX, touches[1].pageY];
+  
+  return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 }
 
+// Touchstart event handler
+function handleTouchStart(event) {
+  const touches = event.touches;
+  
+  if (touches.length === 2) {
+    initialDistance = calculateDistance(touches);
+  }
 }
-function move(ev) {
-if (ev.targetTouches.length == 2 && ev.changedTouches.length == 2) {
-// Check if the two target touches are the same ones that started
-var dist2 = Math.hypot(//get rough estimate of new distance between fingers
-ev.touches[0].pageX - ev.touches[1].pageX,
-ev.touches[0].pageY - ev.touches[1].pageY);
-//alert(dist);
-if(dist1>dist2) {//if fingers are closer now than when they first touched screen, they are pinching
-alert('zoom out');
-    resumeGame();
-}
-if(dist1<dist2) {//if fingers are further apart than when they first touched the screen, they are making the zoomin gesture
-            pauseGame();
-            alert('zoom in');
-        }
+
+// Touchmove event handler
+function handleTouchMove(event) {
+  const touches = event.touches;
+  
+  if (touches.length === 2) {
+    currentDistance = calculateDistance(touches);
+    
+    // Perform pinch gesture detection or manipulation based on distance change
+    if (currentDistance > initialDistance) {
+      pauseGame();
+      console.log('Pinch out detected');
+      // Perform zoom in logic here
+    } else if (currentDistance < initialDistance) {
+      // Pinch in (zoom out) detected
+      resumeGame();
+      console.log('Pinch in detected');
+      // Perform zoom out logic here
     }
-
+  }
 }
+
+// Touchend event handler
+function handleTouchEnd(event) {
+  initialDistance = 0;
+  currentDistance = 0;
+}
+
+// Add event listeners
+document.addEventListener('touchstart', handleTouchStart);
+document.addEventListener('touchmove', handleTouchMove);
+document.addEventListener('touchend', handleTouchEnd);
