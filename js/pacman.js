@@ -386,7 +386,7 @@ function testBubblesPacman() {
 			return;
 		}
 	}
-	
+
 	document.addEventListener('touchstart', handleTouchStart, false);        
 document.addEventListener('touchmove', handleTouchMove, false);
 
@@ -417,9 +417,8 @@ function handleTouchMove(evt) {
                                                                          
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
-            pauseGame();
         } else {
-            resumePacman();
+            
         }                       
     } else {
         if ( yDiff > 0 ) {

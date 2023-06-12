@@ -28,18 +28,21 @@ function handleTouchMove(evt) {
                                                                          
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
-            pauseGame();
+            movePacman(1);
         } else {
-            resumePacman();
+            movePacman(3);
         }                       
     } else {
         if ( yDiff > 0 ) {
-            /* down swipe */ 
+            movePacman(2);
         } else { 
-            /* up swipe */
+            movePacman(4);
         }                                                                 
     }
     /* reset values */
     xDown = null;
     yDown = null;                                             
 };
+
+
+
