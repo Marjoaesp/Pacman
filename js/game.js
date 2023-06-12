@@ -230,7 +230,7 @@ function pauseGame() {
 		PAUSE = true;
 		
 		message("pause");
-		
+		console.log("paused");
 		pauseTimes();
 		pausePacman();
 		pauseGhosts();
