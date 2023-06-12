@@ -1,6 +1,7 @@
 document.addEventListener('touchstart', start, false);
 document.addEventListener('touchmove', move, false);
 var dist1=0;
+
 function start(ev) {
 if (ev.targetTouches.length == 2) {//check if two fingers touched screen
 dist1 = Math.hypot( //get rough estimate of distance between two fingers
