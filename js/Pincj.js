@@ -21,9 +21,9 @@ alert('zoom out');
     resumeGame();
 }
 if(dist1<dist2) {//if fingers are further apart than when they first touched the screen, they are making the zoomin gesture
-    pauseGame();
-alert('zoom in');
-}
-}
+            pauseGame();
+            alert('zoom in');
+        }
+    }
 
 }
