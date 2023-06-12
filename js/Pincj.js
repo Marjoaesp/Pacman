@@ -28,16 +28,15 @@ function handleTouchMove(evt) {
                                                                          
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
-            
+            pauseGame();
         } else {
-            /* left swipe */
+            resumePacman();
         }                       
     } else {
         if ( yDiff > 0 ) {
-            resumeGame();
-
+            /* down swipe */ 
         } else { 
-            pauseGame();
+            /* up swipe */
         }                                                                 
     }
     /* reset values */
